@@ -1,0 +1,998 @@
+{
+  "total_raw_rows": 500,
+  "missing_imputed_count": 3,
+  "imputed_median_time_on_app": 12.0795,
+  "iqr_q1": 450.21,
+  "iqr_q3": 548.8,
+  "iqr_val": 98.59,
+  "iqr_lower": 302.33,
+  "iqr_upper": 696.68,
+  "outliers_removed": 11,
+  "clean_rows": 489,
+  "train_rows": 392,
+  "test_rows": 97,
+  "feature_cols": [
+    "Avg. Session Length",
+    "Time on App",
+    "Time on Website",
+    "Length of Membership"
+  ],
+  "scaler_mean": [
+    33.073963,
+    12.085704,
+    37.148821,
+    3.55494
+  ],
+  "scaler_scale": [
+    0.961222,
+    0.957648,
+    1.036059,
+    0.910954
+  ],
+  "intercept": 498.8146,
+  "scaled_coefficients": {
+    "Avg. Session Length": 25.3039,
+    "Time on App": 37.3365,
+    "Time on Website": -0.4382,
+    "Length of Membership": 55.1343
+  },
+  "unscaled_coefficients": {
+    "Avg. Session Length": 26.3248,
+    "Time on App": 38.9877,
+    "Time on Website": -0.4229,
+    "Length of Membership": 60.5237
+  },
+  "raw_intercept": -1042.4908,
+  "mae": 7.22,
+  "rmse": 9.05,
+  "r2": 0.9869,
+  "corr_matrix": {
+    "Avg. Session Length": {
+      "Avg. Session Length": 1.0,
+      "Time on App": -0.085,
+      "Time on Website": -0.053,
+      "Length of Membership": 0.019,
+      "App_to_Web_Ratio": -0.066,
+      "Engagement_Score": 0.127,
+      "Yearly Amount Spent": 0.323
+    },
+    "Time on App": {
+      "Avg. Session Length": -0.085,
+      "Time on App": 1.0,
+      "Time on Website": 0.071,
+      "Length of Membership": -0.047,
+      "App_to_Web_Ratio": 0.944,
+      "Engagement_Score": -0.056,
+      "Yearly Amount Spent": 0.463
+    },
+    "Time on Website": {
+      "Avg. Session Length": -0.053,
+      "Time on App": 0.071,
+      "Time on Website": 1.0,
+      "Length of Membership": -0.01,
+      "App_to_Web_Ratio": -0.262,
+      "Engagement_Score": -0.012,
+      "Yearly Amount Spent": 0.008
+    },
+    "Length of Membership": {
+      "Avg. Session Length": 0.019,
+      "Time on App": -0.047,
+      "Time on Website": -0.01,
+      "Length of Membership": 1.0,
+      "App_to_Web_Ratio": -0.041,
+      "Engagement_Score": 0.994,
+      "Yearly Amount Spent": 0.78
+    },
+    "App_to_Web_Ratio": {
+      "Avg. Session Length": -0.066,
+      "Time on App": 0.944,
+      "Time on Website": -0.262,
+      "Length of Membership": -0.041,
+      "App_to_Web_Ratio": 1.0,
+      "Engagement_Score": -0.049,
+      "Yearly Amount Spent": 0.446
+    },
+    "Engagement_Score": {
+      "Avg. Session Length": 0.127,
+      "Time on App": -0.056,
+      "Time on Website": -0.012,
+      "Length of Membership": 0.994,
+      "App_to_Web_Ratio": -0.049,
+      "Engagement_Score": 1.0,
+      "Yearly Amount Spent": 0.808
+    },
+    "Yearly Amount Spent": {
+      "Avg. Session Length": 0.323,
+      "Time on App": 0.463,
+      "Time on Website": 0.008,
+      "Length of Membership": 0.78,
+      "App_to_Web_Ratio": 0.446,
+      "Engagement_Score": 0.808,
+      "Yearly Amount Spent": 1.0
+    }
+  },
+  "sample_records": [
+    {
+      "Email": "customer101@gmail.com",
+      "Address": "100 Market St, Suite 10, CA 10001",
+      "Avatar": "Violet",
+      "Avg. Session Length": 33.54,
+      "Time on App": 12.97,
+      "Time on Website": 38.47,
+      "Length of Membership": 4.31,
+      "Yearly Amount Spent": 584.86,
+      "App_to_Web_Ratio": 0.34,
+      "Engagement_Score": 144.51
+    },
+    {
+      "Email": "customer102@yahoo.com",
+      "Address": "117 Market St, Suite 11, NY 10032",
+      "Avatar": "DarkGreen",
+      "Avg. Session Length": 32.91,
+      "Time on App": 13.94,
+      "Time on Website": 37.99,
+      "Length of Membership": 2.98,
+      "Yearly Amount Spent": 529.78,
+      "App_to_Web_Ratio": 0.37,
+      "Engagement_Score": 98.04
+    },
+    {
+      "Email": "customer103@hotmail.com",
+      "Address": "134 Market St, Suite 12, TX 10063",
+      "Avatar": "Bisque",
+      "Avg. Session Length": 33.69,
+      "Time on App": 10.67,
+      "Time on Website": 37.12,
+      "Length of Membership": 2.71,
+      "Yearly Amount Spent": 400.67,
+      "App_to_Web_Ratio": 0.29,
+      "Engagement_Score": 91.36
+    },
+    {
+      "Email": "customer104@outlook.com",
+      "Address": "151 Market St, Suite 13, FL 10094",
+      "Avatar": "SaddleBrown",
+      "Avg. Session Length": 34.56,
+      "Time on App": 12.61,
+      "Time on Website": 36.41,
+      "Length of Membership": 3.53,
+      "Yearly Amount Spent": 552.72,
+      "App_to_Web_Ratio": 0.35,
+      "Engagement_Score": 121.87
+    },
+    {
+      "Email": "customer105@company.org",
+      "Address": "168 Market St, Suite 14, IL 10125",
+      "Avatar": "MediumAquaMarine",
+      "Avg. Session Length": 32.82,
+      "Time on App": 11.41,
+      "Time on Website": 37.77,
+      "Length of Membership": 3.36,
+      "Yearly Amount Spent": 435.5,
+      "App_to_Web_Ratio": 0.3,
+      "Engagement_Score": 110.26
+    },
+    {
+      "Email": "customer106@gmail.com",
+      "Address": "185 Market St, Suite 15, WA 10156",
+      "Avatar": "SlateGray",
+      "Avg. Session Length": 32.82,
+      "Time on App": 11.57,
+      "Time on Website": 37.46,
+      "Length of Membership": 3.08,
+      "Yearly Amount Spent": 445.2,
+      "App_to_Web_Ratio": 0.31,
+      "Engagement_Score": 100.98
+    },
+    {
+      "Email": "customer107@yahoo.com",
+      "Address": "202 Market St, Suite 16, MA 10187",
+      "Avatar": "Aqua",
+      "Avg. Session Length": 34.61,
+      "Time on App": 11.46,
+      "Time on Website": 37.96,
+      "Length of Membership": 4.23,
+      "Yearly Amount Spent": 556.26,
+      "App_to_Web_Ratio": 0.3,
+      "Engagement_Score": 146.29
+    },
+    {
+      "Email": "customer108@hotmail.com",
+      "Address": "219 Market St, Suite 17, PA 10218",
+      "Avatar": "DeepSkyBlue",
+      "Avg. Session Length": 33.81,
+      "Time on App": 11.19,
+      "Time on Website": 37.7,
+      "Length of Membership": 4.49,
+      "Yearly Amount Spent": 532.72,
+      "App_to_Web_Ratio": 0.3,
+      "Engagement_Score": 151.65
+    },
+    {
+      "Email": "customer109@outlook.com",
+      "Address": "236 Market St, Suite 18, GA 10249",
+      "Avatar": "Teal",
+      "Avg. Session Length": 32.59,
+      "Time on App": 12.1,
+      "Time on Website": 38.12,
+      "Length of Membership": 3.62,
+      "Yearly Amount Spent": 497.34,
+      "App_to_Web_Ratio": 0.32,
+      "Engagement_Score": 117.91
+    },
+    {
+      "Email": "customer110@company.org",
+      "Address": "253 Market St, Suite 19, NC 10280",
+      "Avatar": "Crimson",
+      "Avg. Session Length": 33.59,
+      "Time on App": 11.23,
+      "Time on Website": 36.52,
+      "Length of Membership": 5.01,
+      "Yearly Amount Spent": 577.35,
+      "App_to_Web_Ratio": 0.31,
+      "Engagement_Score": 168.19
+    },
+    {
+      "Email": "customer111@gmail.com",
+      "Address": "270 Market St, Suite 20, CA 10311",
+      "Avatar": "SteelBlue",
+      "Avg. Session Length": 32.59,
+      "Time on App": 12.32,
+      "Time on Website": 38.39,
+      "Length of Membership": 2.39,
+      "Yearly Amount Spent": 408.21,
+      "App_to_Web_Ratio": 0.32,
+      "Engagement_Score": 77.84
+    },
+    {
+      "Email": "customer112@yahoo.com",
+      "Address": "287 Market St, Suite 21, NY 10342",
+      "Avatar": "GoldenRod",
+      "Avg. Session Length": 32.59,
+      "Time on App": 12.0,
+      "Time on Website": 37.26,
+      "Length of Membership": 3.34,
+      "Yearly Amount Spent": 462.14,
+      "App_to_Web_Ratio": 0.32,
+      "Engagement_Score": 108.73
+    },
+    {
+      "Email": "customer113@hotmail.com",
+      "Address": "304 Market St, Suite 22, TX 10373",
+      "Avatar": "Violet",
+      "Avg. Session Length": 33.29,
+      "Time on App": 12.08,
+      "Time on Website": 39.16,
+      "Length of Membership": 2.81,
+      "Yearly Amount Spent": 441.37,
+      "App_to_Web_Ratio": 0.31,
+      "Engagement_Score": 93.65
+    },
+    {
+      "Email": "customer115@company.org",
+      "Address": "338 Market St, Suite 24, IL 10435",
+      "Avatar": "Bisque",
+      "Avg. Session Length": 31.34,
+      "Time on App": 11.48,
+      "Time on Website": 38.81,
+      "Length of Membership": 3.45,
+      "Yearly Amount Spent": 432.5,
+      "App_to_Web_Ratio": 0.3,
+      "Engagement_Score": 108.05
+    },
+    {
+      "Email": "customer116@gmail.com",
+      "Address": "355 Market St, Suite 25, WA 10466",
+      "Avatar": "SaddleBrown",
+      "Avg. Session Length": 32.49,
+      "Time on App": 12.8,
+      "Time on Website": 37.26,
+      "Length of Membership": 3.41,
+      "Yearly Amount Spent": 500.47,
+      "App_to_Web_Ratio": 0.34,
+      "Engagement_Score": 110.75
+    },
+    {
+      "Email": "customer117@yahoo.com",
+      "Address": "372 Market St, Suite 26, MA 10497",
+      "Avatar": "MediumAquaMarine",
+      "Avg. Session Length": 32.05,
+      "Time on App": 12.55,
+      "Time on Website": 36.4,
+      "Length of Membership": 5.04,
+      "Yearly Amount Spent": 578.51,
+      "App_to_Web_Ratio": 0.34,
+      "Engagement_Score": 161.63
+    },
+    {
+      "Email": "customer118@hotmail.com",
+      "Address": "389 Market St, Suite 27, PA 10528",
+      "Avatar": "SlateGray",
+      "Avg. Session Length": 33.36,
+      "Time on App": 11.08,
+      "Time on Website": 36.57,
+      "Length of Membership": 4.16,
+      "Yearly Amount Spent": 484.88,
+      "App_to_Web_Ratio": 0.3,
+      "Engagement_Score": 138.81
+    },
+    {
+      "Email": "customer119@outlook.com",
+      "Address": "406 Market St, Suite 28, GA 10559",
+      "Avatar": "Aqua",
+      "Avg. Session Length": 32.15,
+      "Time on App": 12.15,
+      "Time on Website": 36.74,
+      "Length of Membership": 2.51,
+      "Yearly Amount Spent": 419.33,
+      "App_to_Web_Ratio": 0.33,
+      "Engagement_Score": 80.56
+    },
+    {
+      "Email": "customer120@company.org",
+      "Address": "423 Market St, Suite 29, NC 10590",
+      "Avatar": "DeepSkyBlue",
+      "Avg. Session Length": 31.65,
+      "Time on App": 12.79,
+      "Time on Website": 37.49,
+      "Length of Membership": 5.38,
+      "Yearly Amount Spent": 589.23,
+      "App_to_Web_Ratio": 0.34,
+      "Engagement_Score": 170.42
+    },
+    {
+      "Email": "customer121@gmail.com",
+      "Address": "440 Market St, Suite 30, CA 10621",
+      "Avatar": "Teal",
+      "Avg. Session Length": 34.5,
+      "Time on App": 10.4,
+      "Time on Website": 37.59,
+      "Length of Membership": 4.75,
+      "Yearly Amount Spent": 544.86,
+      "App_to_Web_Ratio": 0.28,
+      "Engagement_Score": 163.91
+    },
+    {
+      "Email": "customer122@yahoo.com",
+      "Address": "457 Market St, Suite 31, NY 10652",
+      "Avatar": "Crimson",
+      "Avg. Session Length": 32.83,
+      "Time on App": 12.59,
+      "Time on Website": 36.48,
+      "Length of Membership": 4.11,
+      "Yearly Amount Spent": 548.68,
+      "App_to_Web_Ratio": 0.35,
+      "Engagement_Score": 134.99
+    },
+    {
+      "Email": "customer123@hotmail.com",
+      "Address": "474 Market St, Suite 32, TX 10683",
+      "Avatar": "SteelBlue",
+      "Avg. Session Length": 33.12,
+      "Time on App": 11.39,
+      "Time on Website": 37.04,
+      "Length of Membership": 3.3,
+      "Yearly Amount Spent": 471.43,
+      "App_to_Web_Ratio": 0.31,
+      "Engagement_Score": 109.4
+    },
+    {
+      "Email": "customer124@outlook.com",
+      "Address": "491 Market St, Suite 33, FL 10714",
+      "Avatar": "GoldenRod",
+      "Avg. Session Length": 31.64,
+      "Time on App": 12.61,
+      "Time on Website": 39.22,
+      "Length of Membership": 2.57,
+      "Yearly Amount Spent": 409.23,
+      "App_to_Web_Ratio": 0.32,
+      "Engagement_Score": 81.33
+    },
+    {
+      "Email": "customer125@company.org",
+      "Address": "508 Market St, Suite 34, IL 10745",
+      "Avatar": "Violet",
+      "Avg. Session Length": 32.51,
+      "Time on App": 11.29,
+      "Time on Website": 38.8,
+      "Length of Membership": 3.16,
+      "Yearly Amount Spent": 399.89,
+      "App_to_Web_Ratio": 0.29,
+      "Engagement_Score": 102.66
+    },
+    {
+      "Email": "customer126@gmail.com",
+      "Address": "525 Market St, Suite 35, WA 10776",
+      "Avatar": "DarkGreen",
+      "Avg. Session Length": 33.16,
+      "Time on App": 10.26,
+      "Time on Website": 37.5,
+      "Length of Membership": 4.62,
+      "Yearly Amount Spent": 497.94,
+      "App_to_Web_Ratio": 0.27,
+      "Engagement_Score": 153.16
+    },
+    {
+      "Email": "customer127@yahoo.com",
+      "Address": "542 Market St, Suite 36, MA 10807",
+      "Avatar": "Bisque",
+      "Avg. Session Length": 31.91,
+      "Time on App": 10.44,
+      "Time on Website": 37.1,
+      "Length of Membership": 5.41,
+      "Yearly Amount Spent": 536.96,
+      "App_to_Web_Ratio": 0.28,
+      "Engagement_Score": 172.78
+    },
+    {
+      "Email": "customer128@hotmail.com",
+      "Address": "559 Market St, Suite 37, PA 10838",
+      "Avatar": "SaddleBrown",
+      "Avg. Session Length": 33.42,
+      "Time on App": 12.1,
+      "Time on Website": 37.18,
+      "Length of Membership": 5.07,
+      "Yearly Amount Spent": 613.78,
+      "App_to_Web_Ratio": 0.33,
+      "Engagement_Score": 169.56
+    },
+    {
+      "Email": "customer129@outlook.com",
+      "Address": "576 Market St, Suite 38, GA 10869",
+      "Avatar": "MediumAquaMarine",
+      "Avg. Session Length": 32.46,
+      "Time on App": 12.31,
+      "Time on Website": 37.68,
+      "Length of Membership": 3.04,
+      "Yearly Amount Spent": 462.13,
+      "App_to_Web_Ratio": 0.33,
+      "Engagement_Score": 98.7
+    },
+    {
+      "Email": "customer130@company.org",
+      "Address": "593 Market St, Suite 39, NC 10900",
+      "Avatar": "SlateGray",
+      "Avg. Session Length": 32.76,
+      "Time on App": 11.15,
+      "Time on Website": 36.03,
+      "Length of Membership": 2.41,
+      "Yearly Amount Spent": 379.69,
+      "App_to_Web_Ratio": 0.31,
+      "Engagement_Score": 78.97
+    },
+    {
+      "Email": "customer131@gmail.com",
+      "Address": "610 Market St, Suite 40, CA 10931",
+      "Avatar": "Aqua",
+      "Avg. Session Length": 32.45,
+      "Time on App": 12.68,
+      "Time on Website": 36.8,
+      "Length of Membership": 3.67,
+      "Yearly Amount Spent": 520.91,
+      "App_to_Web_Ratio": 0.34,
+      "Engagement_Score": 119.14
+    },
+    {
+      "Email": "customer132@yahoo.com",
+      "Address": "627 Market St, Suite 41, NY 10962",
+      "Avatar": "DeepSkyBlue",
+      "Avg. Session Length": 34.88,
+      "Time on App": 10.41,
+      "Time on Website": 35.37,
+      "Length of Membership": 1.76,
+      "Yearly Amount Spent": 361.25,
+      "App_to_Web_Ratio": 0.29,
+      "Engagement_Score": 61.45
+    },
+    {
+      "Email": "customer133@hotmail.com",
+      "Address": "644 Market St, Suite 42, TX 10993",
+      "Avatar": "Teal",
+      "Avg. Session Length": 33.04,
+      "Time on App": 11.98,
+      "Time on Website": 37.46,
+      "Length of Membership": 3.85,
+      "Yearly Amount Spent": 517.14,
+      "App_to_Web_Ratio": 0.32,
+      "Engagement_Score": 127.3
+    },
+    {
+      "Email": "customer134@outlook.com",
+      "Address": "661 Market St, Suite 43, FL 11024",
+      "Avatar": "Crimson",
+      "Avg. Session Length": 32.0,
+      "Time on App": 10.85,
+      "Time on Website": 37.71,
+      "Length of Membership": 3.38,
+      "Yearly Amount Spent": 418.03,
+      "App_to_Web_Ratio": 0.29,
+      "Engagement_Score": 108.25
+    },
+    {
+      "Email": "customer135@company.org",
+      "Address": "678 Market St, Suite 44, IL 11055",
+      "Avatar": "SteelBlue",
+      "Avg. Session Length": 33.86,
+      "Time on App": 11.4,
+      "Time on Website": 36.57,
+      "Length of Membership": 3.06,
+      "Yearly Amount Spent": 473.52,
+      "App_to_Web_Ratio": 0.31,
+      "Engagement_Score": 103.76
+    },
+    {
+      "Email": "customer136@gmail.com",
+      "Address": "695 Market St, Suite 45, WA 11086",
+      "Avatar": "GoldenRod",
+      "Avg. Session Length": 31.84,
+      "Time on App": 12.1,
+      "Time on Website": 38.65,
+      "Length of Membership": 1.94,
+      "Yearly Amount Spent": 395.73,
+      "App_to_Web_Ratio": 0.31,
+      "Engagement_Score": 61.62
+    },
+    {
+      "Email": "customer137@yahoo.com",
+      "Address": "712 Market St, Suite 46, MA 11117",
+      "Avatar": "Violet",
+      "Avg. Session Length": 33.26,
+      "Time on App": 11.2,
+      "Time on Website": 35.82,
+      "Length of Membership": 4.04,
+      "Yearly Amount Spent": 503.04,
+      "App_to_Web_Ratio": 0.31,
+      "Engagement_Score": 134.48
+    },
+    {
+      "Email": "customer138@hotmail.com",
+      "Address": "729 Market St, Suite 47, PA 11148",
+      "Avatar": "DarkGreen",
+      "Avg. Session Length": 31.11,
+      "Time on App": 11.67,
+      "Time on Website": 35.58,
+      "Length of Membership": 3.0,
+      "Yearly Amount Spent": 392.36,
+      "App_to_Web_Ratio": 0.33,
+      "Engagement_Score": 93.25
+    },
+    {
+      "Email": "customer139@outlook.com",
+      "Address": "746 Market St, Suite 48, GA 11179",
+      "Avatar": "Bisque",
+      "Avg. Session Length": 31.74,
+      "Time on App": 13.05,
+      "Time on Website": 37.29,
+      "Length of Membership": 2.36,
+      "Yearly Amount Spent": 427.8,
+      "App_to_Web_Ratio": 0.35,
+      "Engagement_Score": 74.9
+    },
+    {
+      "Email": "customer141@gmail.com",
+      "Address": "780 Market St, Suite 50, CA 11241",
+      "Avatar": "MediumAquaMarine",
+      "Avg. Session Length": 33.78,
+      "Time on App": 12.88,
+      "Time on Website": 38.76,
+      "Length of Membership": 3.5,
+      "Yearly Amount Spent": 538.1,
+      "App_to_Web_Ratio": 0.33,
+      "Engagement_Score": 118.32
+    },
+    {
+      "Email": "customer142@yahoo.com",
+      "Address": "797 Market St, Suite 51, NY 11272",
+      "Avatar": "SlateGray",
+      "Avg. Session Length": 33.22,
+      "Time on App": 10.93,
+      "Time on Website": 36.6,
+      "Length of Membership": 5.3,
+      "Yearly Amount Spent": 561.13,
+      "App_to_Web_Ratio": 0.3,
+      "Engagement_Score": 176.14
+    }
+  ],
+  "test_actual_vs_pred": [
+    {
+      "actual": 680.97,
+      "predicted": 675.71,
+      "residual": 5.26
+    },
+    {
+      "actual": 507.39,
+      "predicted": 511.68,
+      "residual": -4.29
+    },
+    {
+      "actual": 492.71,
+      "predicted": 474.28,
+      "residual": 18.43
+    },
+    {
+      "actual": 584.99,
+      "predicted": 578.67,
+      "residual": 6.32
+    },
+    {
+      "actual": 421.54,
+      "predicted": 422.99,
+      "residual": -1.45
+    },
+    {
+      "actual": 399.4,
+      "predicted": 393.62,
+      "residual": 5.78
+    },
+    {
+      "actual": 361.25,
+      "predicted": 373.15,
+      "residual": -11.9
+    },
+    {
+      "actual": 518.33,
+      "predicted": 519.05,
+      "residual": -0.72
+    },
+    {
+      "actual": 526.83,
+      "predicted": 544.93,
+      "residual": -18.1
+    },
+    {
+      "actual": 626.75,
+      "predicted": 639.67,
+      "residual": -12.92
+    },
+    {
+      "actual": 577.35,
+      "predicted": 567.04,
+      "residual": 10.31
+    },
+    {
+      "actual": 565.44,
+      "predicted": 553.56,
+      "residual": 11.88
+    },
+    {
+      "actual": 509.12,
+      "predicted": 510.92,
+      "residual": -1.8
+    },
+    {
+      "actual": 695.49,
+      "predicted": 691.71,
+      "residual": 3.78
+    },
+    {
+      "actual": 563.69,
+      "predicted": 568.08,
+      "residual": -4.39
+    },
+    {
+      "actual": 525.87,
+      "predicted": 524.74,
+      "residual": 1.13
+    },
+    {
+      "actual": 512.49,
+      "predicted": 513.81,
+      "residual": -1.32
+    },
+    {
+      "actual": 524.13,
+      "predicted": 514.31,
+      "residual": 9.82
+    },
+    {
+      "actual": 445.1,
+      "predicted": 457.44,
+      "residual": -12.34
+    },
+    {
+      "actual": 448.36,
+      "predicted": 453.38,
+      "residual": -5.02
+    },
+    {
+      "actual": 514.93,
+      "predicted": 514.95,
+      "residual": -0.02
+    },
+    {
+      "actual": 348.64,
+      "predicted": 371.39,
+      "residual": -22.75
+    },
+    {
+      "actual": 564.32,
+      "predicted": 565.59,
+      "residual": -1.27
+    },
+    {
+      "actual": 430.6,
+      "predicted": 421.45,
+      "residual": 9.15
+    },
+    {
+      "actual": 395.18,
+      "predicted": 395.54,
+      "residual": -0.36
+    },
+    {
+      "actual": 434.05,
+      "predicted": 438.26,
+      "residual": -4.21
+    },
+    {
+      "actual": 584.71,
+      "predicted": 585.52,
+      "residual": -0.81
+    },
+    {
+      "actual": 601.25,
+      "predicted": 601.53,
+      "residual": -0.28
+    },
+    {
+      "actual": 355.7,
+      "predicted": 366.81,
+      "residual": -11.11
+    },
+    {
+      "actual": 579.55,
+      "predicted": 587.35,
+      "residual": -7.8
+    },
+    {
+      "actual": 488.72,
+      "predicted": 478.42,
+      "residual": 10.3
+    },
+    {
+      "actual": 583.7,
+      "predicted": 575.91,
+      "residual": 7.79
+    },
+    {
+      "actual": 488.32,
+      "predicted": 494.43,
+      "residual": -6.11
+    },
+    {
+      "actual": 507.74,
+      "predicted": 520.88,
+      "residual": -13.14
+    },
+    {
+      "actual": 473.52,
+      "predicted": 463.6,
+      "residual": 9.92
+    },
+    {
+      "actual": 426.68,
+      "predicted": 429.45,
+      "residual": -2.77
+    },
+    {
+      "actual": 584.86,
+      "predicted": 590.53,
+      "residual": -5.67
+    },
+    {
+      "actual": 462.14,
+      "predicted": 469.44,
+      "residual": -7.3
+    },
+    {
+      "actual": 491.48,
+      "predicted": 511.13,
+      "residual": -19.65
+    },
+    {
+      "actual": 428.06,
+      "predicted": 424.34,
+      "residual": 3.72
+    },
+    {
+      "actual": 459.72,
+      "predicted": 451.57,
+      "residual": 8.15
+    },
+    {
+      "actual": 623.68,
+      "predicted": 633.43,
+      "residual": -9.75
+    },
+    {
+      "actual": 626.93,
+      "predicted": 609.28,
+      "residual": 17.65
+    },
+    {
+      "actual": 550.42,
+      "predicted": 554.97,
+      "residual": -4.55
+    },
+    {
+      "actual": 563.64,
+      "predicted": 553.54,
+      "residual": 10.1
+    },
+    {
+      "actual": 557.4,
+      "predicted": 563.51,
+      "residual": -6.11
+    },
+    {
+      "actual": 589.23,
+      "predicted": 599.55,
+      "residual": -10.32
+    },
+    {
+      "actual": 541.94,
+      "predicted": 547.8,
+      "residual": -5.86
+    },
+    {
+      "actual": 551.98,
+      "predicted": 551.83,
+      "residual": 0.15
+    },
+    {
+      "actual": 531.96,
+      "predicted": 532.99,
+      "residual": -1.03
+    },
+    {
+      "actual": 404.59,
+      "predicted": 403.88,
+      "residual": 0.71
+    },
+    {
+      "actual": 561.13,
+      "predicted": 563.65,
+      "residual": -2.52
+    },
+    {
+      "actual": 511.67,
+      "predicted": 527.19,
+      "residual": -15.52
+    },
+    {
+      "actual": 466.07,
+      "predicted": 461.88,
+      "residual": 4.19
+    },
+    {
+      "actual": 423.54,
+      "predicted": 410.58,
+      "residual": 12.96
+    },
+    {
+      "actual": 482.38,
+      "predicted": 486.86,
+      "residual": -4.48
+    },
+    {
+      "actual": 574.89,
+      "predicted": 575.25,
+      "residual": -0.36
+    },
+    {
+      "actual": 375.65,
+      "predicted": 376.42,
+      "residual": -0.77
+    },
+    {
+      "actual": 463.02,
+      "predicted": 464.78,
+      "residual": -1.76
+    },
+    {
+      "actual": 583.37,
+      "predicted": 568.47,
+      "residual": 14.9
+    },
+    {
+      "actual": 495.37,
+      "predicted": 499.64,
+      "residual": -4.27
+    },
+    {
+      "actual": 535.34,
+      "predicted": 544.5,
+      "residual": -9.16
+    },
+    {
+      "actual": 491.49,
+      "predicted": 498.37,
+      "residual": -6.88
+    },
+    {
+      "actual": 388.51,
+      "predicted": 385.15,
+      "residual": 3.36
+    },
+    {
+      "actual": 430.16,
+      "predicted": 424.97,
+      "residual": 5.19
+    },
+    {
+      "actual": 442.44,
+      "predicted": 434.42,
+      "residual": 8.02
+    },
+    {
+      "actual": 528.71,
+      "predicted": 521.63,
+      "residual": 7.08
+    },
+    {
+      "actual": 651.47,
+      "predicted": 667.95,
+      "residual": -16.48
+    },
+    {
+      "actual": 446.37,
+      "predicted": 444.08,
+      "residual": 2.29
+    },
+    {
+      "actual": 454.71,
+      "predicted": 444.2,
+      "residual": 10.51
+    },
+    {
+      "actual": 669.41,
+      "predicted": 684.24,
+      "residual": -14.83
+    },
+    {
+      "actual": 513.09,
+      "predicted": 521.77,
+      "residual": -8.68
+    },
+    {
+      "actual": 453.49,
+      "predicted": 459.7,
+      "residual": -6.21
+    },
+    {
+      "actual": 400.28,
+      "predicted": 392.11,
+      "residual": 8.17
+    },
+    {
+      "actual": 419.5,
+      "predicted": 403.5,
+      "residual": 16.0
+    },
+    {
+      "actual": 565.01,
+      "predicted": 558.26,
+      "residual": 6.75
+    },
+    {
+      "actual": 471.06,
+      "predicted": 475.71,
+      "residual": -4.65
+    },
+    {
+      "actual": 474.47,
+      "predicted": 469.91,
+      "residual": 4.56
+    },
+    {
+      "actual": 502.47,
+      "predicted": 507.06,
+      "residual": -4.59
+    },
+    {
+      "actual": 409.04,
+      "predicted": 412.13,
+      "residual": -3.09
+    }
+  ]
+}
